@@ -1,0 +1,185 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP');
+
+body {
+	background-color: #EBF4EF;
+	color: #333333;
+    /*フォント変更*/
+	font-family: 'Noto Sans JP', sans-serif;
+
+}
+
+.title {
+	/*内容 期限 カテゴリー選択の部分*/
+	color: #333333;
+	font-size: 18px;
+}
+
+.entry{
+/*	todo登録画面のinoutタグの幅/高さ調整*/
+	width: 200px;
+	height: 30px;
+	font-size: 17px;
+}
+
+
+h1 {
+	display: inline-block;
+	color: #69BD83;
+	font-size: 33pt;
+	/* 文字間 */
+	letter-spacing: 3px;
+
+}
+
+table {
+	border-collapse: collapse;
+	border-color: #69BD83;
+
+}
+
+th,
+td {
+	/* 枠線指定 */
+	border: solid 1px;
+	text-align: center;
+	color: #333333;
+	border-color: #69BD83;
+
+}
+
+th {
+	width: 300px;
+	height: 40px;
+	text-align: center;
+	background: #69BD83;
+	color: #333333;
+	border-color: #333333;
+
+}
+
+
+.container {
+	font-size: 17px;
+	width: 700px;
+	margin: 0 auto;
+}
+
+/*チェックしたToDoをまとめて削除ボタン*/
+/*新規ToDoを登録ボタン*/
+.btn {
+	color: #FFF;
+	padding: 10px 20px;
+	border: 2px solid #69BD83;
+	background: #69BD83;
+	border-radius: 100vh;
+	transition: 0.5s;
+}
+
+.btn:hover {
+	color: #69BD83;
+	background: #EBF4EF;
+}
+
+/*完了ボタン*/
+.compbtn {
+	color: #FFF;
+	padding: 7px 17px;
+	border: 2px solid #69BD83;
+	background: #69BD83;
+	border-radius: 100vh;
+	transition: 0.5s;
+}
+
+.compbtn:hover {
+	color: #69BD83;
+	background: #EBF4EF;
+}
+
+/*完了ボタンを押すと取り消し線が付く*/
+.line-through {
+    /*取り消し線*/
+	text-decoration: line-through;
+}
+
+/*削除ボタン*/
+.deletebtn {
+	color: #FFF;
+	padding: 7px 17px;
+	border: 2px solid #69BD83;
+	background: #69BD83;
+	border-radius: 100vh;
+	transition: 0.5s;
+}
+
+.deletebtn:hover {
+	color: #69BD83;
+	background: #EBF4EF;
+}
+
+/*チェックボックス*/
+.thcheckBox {
+	width: 50px;
+	height: 40px;
+}
+.CheckboxLabel {
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.CheckboxInput {
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+.CheckboxInput:hover{
+  background: rgba(0,0,0,.05) !important;
+}
+.CheckboxInput:hover > .CheckboxSpan{
+  transform: scale(1.1);
+}
+.CheckboxInput:focus + .CheckboxSpan{
+  transform: scale(1.1);
+}
+.CheckboxInput:checked + .CheckboxSpan {
+  background: #69BD83;
+}
+.CheckboxInput:checked + .CheckboxSpan::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-135deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.CheckboxInput:checked + .CheckboxSpan::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  border-radius: 2px;
+  transform: translate(-6px, 5px) rotateZ(-45deg);
+  transform-origin: 2px 2px;
+  background: #FFFFFF;
+}
+.CheckboxSpan {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: solid 2px transparent;
+  background: rgba(0, 0, 0, .15);
+  border-radius: 50%;
+  transition: all .15s linear;
+}
