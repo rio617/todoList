@@ -24,19 +24,19 @@ List<String> categoies = (List<String>) request.getAttribute("categories");
 			<input class="entry" type="text" name="toDo" placeholder="ここにToDoを入力"></p>
 		<p class="title">期 限<br>
 			<input class="entry" type="date" name="limit"></p>
+		<p class="title">新 規 カ テ ゴ リ ー 作 成<br>
+			<input  class="entry"type="text" name="newcategory"></p>
 		<p class="title">カ テ ゴ リ ー 選 択<br>
 			<select class="entry" name="category">
 				<%
-				for (String s : categoies) {
+				for (String c : categoies) {
 				%>
-				<option value=<%=s%>><%=s%></option>
+				<option value=<%=c%>><%=c%></option>
 				<%
 				}
 				%>
 			</select></p>
-		<p class="title">新 規 カ テ ゴ リ ー 作 成<br>
-			<input  class="entry"type="text" name="newcategory"></p>
-			
+
 			<br><input class="btn" type=submit value=登録><br><br>
 		
 	</form>
